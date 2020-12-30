@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import MainLayout from '../../components/mainLayout';
+
 
 
 export default function Signin() {
@@ -21,14 +23,14 @@ export default function Signin() {
       let login = "abc@abc.com" //gonna be a server side for logIn
       let password = "abcabc"
 
-      if (allValues.login === login && allValues.password === password) {
-          router.push('/Home')
+      if (allValues.login.toLowerCase() === login && allValues.password === password) {
+          router.push('/docspage/docspage')
       }
     }
 
 
     return (
-        <div className='container row col-sm-6 border p-5 rounded-3 shadow-lg bg-light'>
+        <MainLayout className='container row col-sm-5 border p-5 rounded-3 shadow-lg bg-light' title='Sign In'>
             <h2>Войти в кабинет</h2>
             <form>
                 <div class="form-floating mb-3">
@@ -44,7 +46,7 @@ export default function Signin() {
                 </div>
                     
             </form>
-        </div>
+        </MainLayout>
     )
 
 }
