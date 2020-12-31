@@ -42,7 +42,7 @@ export default function Signin() {
 
                 <form onSubmit={credentialTestrt} >
                   <input type="text" id="login" className="fadeIn second" name="login" onChange={changeHandler} placeholder="Логин"/>
-                  <input type="text" id="password" className="fadeIn third" name='password' onChange={changeHandler} placeholder="Пароль"/>
+                  <input type="password" id="password" className="fadeIn third" name='password' onChange={changeHandler} placeholder="Пароль"/>
                   <input type="submit" className="fadeIn fourth" value="Войти"/>
                 </form>
                 {error === 1 ? <p className="alert text-danger alert-danger" role="alert">Неправильный логин или пароль</p> : <p></p>}
@@ -170,6 +170,26 @@ export default function Signin() {
                   }
                   
                   input[type=text] {
+                    background-color: #f6f6f6;
+                    border: none;
+                    color: #0d0d0d;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 5px;
+                    width: 85%;
+                    border: 2px solid #f6f6f6;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    -ms-transition: all 0.5s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                    -webkit-border-radius: 5px 5px 5px 5px;
+                    border-radius: 5px 5px 5px 5px;
+                  }
+                  input[type=password] {
                     background-color: #f6f6f6;
                     border: none;
                     color: #0d0d0d;
