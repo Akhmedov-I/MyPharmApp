@@ -1,12 +1,10 @@
 import Link from 'next/link';
-import MainLayout from '../../components/mainLayout';
+import CabinetLayout from '../../components/cabinetLayout.js';
 
 export default function Docspage(){
     return (
-        <MainLayout title='DOC PHARM'>
-            <Link href='/'>
-                <h1>Hello people</h1>
-            </Link>
-        </MainLayout>
+        <CabinetLayout title='Кабинет'>
+            
+        </CabinetLayout>
     )
 }
